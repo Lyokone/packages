@@ -23,7 +23,7 @@ String readStdin() {
 
 /// A helper class for managing indentation, wrapping a [StringSink].
 class Indent {
-  /// Constructor which takes a [StringSink] [Ident] will wrap.
+  /// Constructor which takes a [StringSink] [Indent] will wrap.
   Indent(this._sink);
 
   int _count = 0;
@@ -70,7 +70,7 @@ class Indent {
     }
   }
 
-  /// Scoped increase of the ident level.  For the execution of [func] the
+  /// Scoped increase of the indentation level. For the execution of [func] the
   /// indentation will be incremented.
   void scoped(
     String? begin,
@@ -101,7 +101,7 @@ class Indent {
         addTrailingNewline: addTrailingNewline);
   }
 
-  /// Scoped increase of the ident level.  For the execution of [func] the
+  /// Scoped increase of the indentation level. For the execution of [func] the
   /// indentation will be incremented by the given amount.
   void nest(int count, Function func) {
     inc(count);
